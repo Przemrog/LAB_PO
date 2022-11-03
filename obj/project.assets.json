@@ -229,9 +229,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\c#\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "F:\\c#\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "F:\\c#\\WebApplication1\\WebApplication1\\WebApplication3.csproj",
+      "projectName": "WebApplication3",
+      "projectPath": "F:\\c#\\WebApplication1\\WebApplication1\\WebApplication3.csproj",
       "packagesPath": "C:\\Users\\w65566\\.nuget\\packages\\",
       "outputPath": "F:\\c#\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
