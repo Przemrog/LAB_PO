@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.serwisy;
+using WebApplication1.Services;
 
-namespace WebApplication1.Controllers
+namespace WebApplication1.Controllers.lab2
 {
     [ApiController]
     [Route("[controller]/[action]")]
@@ -22,7 +22,7 @@ namespace WebApplication1.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public int GetValue()
         {
-            var calculateInstance = new Calculate(23);
+            var calculateInstance = new Services.lab2.Calculate(23);
             calculateInstance.Add(1000);
             calculateInstance.Decrease(990); //powinno wyjsc 33
             return calculateInstance.GetValue();
