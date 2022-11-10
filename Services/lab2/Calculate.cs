@@ -1,4 +1,4 @@
-﻿namespace WebApplication1.Services.lab2
+﻿namespace WebApplication3.Services.LAB2
 {
     public class Calculate
     {
@@ -9,7 +9,7 @@
 
         private int Value { get; set; }
 
-        public void Add(int value)
+        public void Increase(int value)
         {
             Value += value;
         }

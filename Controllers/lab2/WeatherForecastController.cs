@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Services;
+using WebApplication3.Services;
+using WebApplication3.Services.LAB2;
 
-namespace WebApplication1.Controllers.lab2
+namespace WebApplication3.Controllers.LAB2
 {
     [ApiController]
     [Route("[controller]/[action]")]
@@ -20,14 +21,27 @@ namespace WebApplication1.Controllers.lab2
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public int GetValue()
+        public IEnumerable<WeatherForecast> Get()
         {
-            var calculateInstance = new Services.lab2.Calculate(23);
-            calculateInstance.Add(1000);
-            calculateInstance.Decrease(990); //powinno wyjsc 33
-            return calculateInstance.GetValue();
-            //calculateInstance2 = new Calculate(50);
-            //return newList<int>() {calculateInstance2.GetValue(), calculateInstance.GetValue()
+            var calculateInstance = new Calculate(23);
+
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
+        }
+
+        [HttpGet]
+        public List<int> GetValue()
+        {
+
+            var calculateInstance = new Calculate(23);
+            var calculateInstance2 = new Calculate(45);
+
+            return new List<int>() { calculateInstance2.GetValue(), calculateInstance.GetValue() };
         }
 
     }
